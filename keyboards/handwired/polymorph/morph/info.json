@@ -1,0 +1,17 @@
+{
+    "keyboard_name": "Polymorph Morph",
+    "manufacturer": "LukasEifel",
+    "maintainer": "[LukasEifel]",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "matrix_pins": {
+        "cols": ["GP4"],
+        "rows": ["GP5"]
+    },
+    "backlight": {
+        "pin": "GP25"
+    },
+    "ws2812": {
+        "pin": "GP25"
+    }
+}
