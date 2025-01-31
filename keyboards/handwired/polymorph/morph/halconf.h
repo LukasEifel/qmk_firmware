@@ -21,10 +21,15 @@
 
 #pragma once
 
+#define PAL_USE_WAIT TRUE
+#define PAL_USE_CALLBACKS TRUE
 #include_next <halconf.h>
 
 #undef HAL_USE_I2C
 #define HAL_USE_I2C TRUE
+
+#undef HAL_USE_SPI
+#define HAL_USE_SPI TRUE
 
 #define SERIAL_PIO_USE_PIO1
 
@@ -35,3 +40,5 @@
 //4	38400 baud
 //5	19200 baud
 #define SELECT_SOFT_SERIAL_SPEED 1
+
+#define PICO_FLASH_SIZE_BYTES (8 * 1024 * 1024)

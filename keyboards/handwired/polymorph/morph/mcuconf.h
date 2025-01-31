@@ -68,6 +68,19 @@ ChibiOS - Copyright (C) 2006..2021 Giovanni Di Sirio
 #define RP_SIO_USE_UART1                    FALSE
 
 /*
+ * SPI driver system settings.
+ */
+#define RP_SPI_USE_SPI0                     TRUE
+#define RP_SPI_USE_SPI1                     FALSE
+#define RP_SPI_SPI0_RX_DMA_CHANNEL          RP_DMA_CHANNEL_ID_ANY
+#define RP_SPI_SPI0_TX_DMA_CHANNEL          RP_DMA_CHANNEL_ID_ANY
+#define RP_SPI_SPI1_RX_DMA_CHANNEL          RP_DMA_CHANNEL_ID_ANY
+#define RP_SPI_SPI1_TX_DMA_CHANNEL          RP_DMA_CHANNEL_ID_ANY
+#define RP_SPI_SPI0_DMA_PRIORITY            1
+#define RP_SPI_SPI1_DMA_PRIORITY            1
+#define RP_SPI_DMA_ERROR_HOOK(spip)
+
+/*
  * PWM driver system settings.
  */
 #define RP_PWM_USE_PWM0                     FALSE

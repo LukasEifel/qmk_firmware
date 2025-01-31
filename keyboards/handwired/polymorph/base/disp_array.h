@@ -1,6 +1,5 @@
 #pragma once
 
-#include "BitBang_I2C.h"
 #include "fonts/gfxfont.h"
 
 int8_t kdisp_write_gfx_char(const GFXfont **fonts, uint8_t num_fonts, int8_t x, int8_t y, uint16_t c);
@@ -12,6 +11,12 @@ void kdisp_write_base_char(int8_t x, int8_t y, char c);
 void kdisp_draw_bitmap(int8_t x, int8_t y, const uint8_t pgm_bmp[], int8_t bmp_width, int8_t bmp_height);
 
 void kdisp_set_buffer(uint8_t vertical_pixel_row_of_8_pixels);
+
+void kdisp_set_mask(uint8_t vertical_pixel_row_of_8_pixels);
+
+void combine_with_mask(void);
+
+void prepare_mask_buffer(uint8_t oflags);
 
 void kdisp_send_buffer(void);
 
@@ -36,3 +41,4 @@ void kdisp_setup(bool turn_on);
 uint8_t* get_scratch_buffer(void);
 
 int16_t get_scratch_buffer_size(void);
+
